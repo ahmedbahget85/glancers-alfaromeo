@@ -1,0 +1,1 @@
+<?php do_action( 'etienne_elated_get_footer_template' );

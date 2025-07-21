@@ -1,0 +1,148 @@
+[
+    {
+        "name": "jasny/consolekit-extension",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jasny/consolekit-extension.git",
+            "reference": "1a651e570ecd5c8fb183ab3f2a5a88454c5ff6c7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jasny/consolekit-extension/zipball/1a651e570ecd5c8fb183ab3f2a5a88454c5ff6c7",
+            "reference": "1a651e570ecd5c8fb183ab3f2a5a88454c5ff6c7",
+            "shasum": ""
+        },
+        "require": {
+            "maximebf/consolekit": "~1.0.0",
+            "php": ">=5.3.2"
+        },
+        "time": "2014-04-24T22:55:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Jasny\\ConsoleKit\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Arnold Daniels",
+                "email": "arnold@jasny.net",
+                "homepage": "http://www.jasny.net"
+            }
+        ],
+        "description": "An extension to maximebf/consolekit",
+        "homepage": "http://jasny.github.com/consolekit-extension",
+        "keywords": [
+            "cli",
+            "commands",
+            "console",
+            "shell"
+        ]
+    },
+    {
+        "name": "jasny/dbvc",
+        "version": "v0.1.4",
+        "version_normalized": "0.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jasny/dbvc.git",
+            "reference": "770ac5a918fc1a9ef60f81d4a262d050e8221b9f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jasny/dbvc/zipball/770ac5a918fc1a9ef60f81d4a262d050e8221b9f",
+            "reference": "770ac5a918fc1a9ef60f81d4a262d050e8221b9f",
+            "shasum": ""
+        },
+        "require": {
+            "jasny/consolekit-extension": "~1.0.2",
+            "maximebf/consolekit": "1.*",
+            "php": ">=5.3.2"
+        },
+        "time": "2014-07-31T03:35:22+00:00",
+        "bin": [
+            "bin/dbvc"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Jasny\\DBVC": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Arnold Daniels",
+                "email": "arnold@jasny.net",
+                "homepage": "http://www.jasny.net"
+            }
+        ],
+        "description": "Database version control",
+        "homepage": "http://jasny.github.com/dbvc",
+        "keywords": [
+            "database",
+            "db",
+            "git",
+            "mysql",
+            "vcs",
+            "versioning"
+        ]
+    },
+    {
+        "name": "maximebf/consolekit",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/ConsoleKit.git",
+            "reference": "c46403e2cf98e8413168c523bdbb7c13a386abe5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/ConsoleKit/zipball/c46403e2cf98e8413168c523bdbb7c13a386abe5",
+            "reference": "c46403e2cf98e8413168c523bdbb7c13a386abe5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2013-01-01T16:03:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "ConsoleKit": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maxime Bouroumeau-Fuseau",
+                "email": "maxime.bouroumeau@gmail.com",
+                "homepage": "http://maximebf.com"
+            }
+        ],
+        "description": "Library to create command line utilities",
+        "homepage": "https://github.com/maximebf/ConsoleKit",
+        "keywords": [
+            "cli",
+            "commands",
+            "console",
+            "shell"
+        ]
+    }
+]

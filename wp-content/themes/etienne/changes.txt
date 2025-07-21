@@ -1,0 +1,21 @@
+1.0.4
+- Added WooCommerce 3.6.1 compatibility
+- Updated Etienne Core to 1.0.3
+- Updated Revolution Slider to 5.4.8.3
+- Improved import functionality
+- Improved theme security
+
+1.0.3
+- Minor theme improvements
+
+1.0.2
+- Improved framework files
+- Updated Etienne Core plugin to 1.0.2
+- Updated Revolution Slider to 5.4.8.3
+- Updated pot file
+
+1.0.1
+- Fixed first main color option
+- Added target option for image marquee shortcode
+- Updated Etienne Core plugin to version 1.0.1
+- Updated WPBakery Visual Composer plugin to version 5.7

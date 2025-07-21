@@ -1,0 +1,371 @@
+html {
+    // for firefox
+    scrollbar-width: none;
+
+}
+
+
+
+body {
+    overflow-x: hidden;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .main-wrapper {
+        margin: 0 auto;
+        padding: 0;
+        font-family: 'Apex New Book', sans-serif;
+        transition: all 0.5s ease-in-out;
+        //text-transform: capitalize;
+        color: $white;
+        overflow-x: hidden;
+        min-height: 100vh;
+
+    }
+
+
+
+
+
+
+    span {
+        opacity: 1 !important;
+    }
+
+    .font-lg {
+        font-size: 22px;
+
+
+        @media screen and (max-width:768px) {
+            font-size: 20px;
+        }
+    }
+
+    .font-md {
+        font-size: 20px;
+
+        @media screen and (min-width:769px) and (max-width:1199.98px) {
+            font-size: 18px;
+        }
+
+
+        @media screen and (max-width:768px) {
+            font-size: 16px;
+        }
+    }
+
+    .font-sm {
+        font-size: 18px;
+
+        @media screen and (min-width:769px) and (max-width:1199.98px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+
+
+}
+
+.thin {
+    font-family: 'Apex New Thin', sans-serif;
+}
+
+.bold {
+    font-family: 'Apex New Bold', sans-serif;
+}
+
+
+.light {
+    font-family: 'Apex New Light', sans-serif;
+}
+
+.meduim {
+    font-family: 'Apex New Medium', sans-serif;
+}
+
+.italic {
+    font-family: 'Apex New Book Italic', sans-serif;
+
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize !important;
+}
+
+.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+
+}
+
+h1 {
+    font-size: 3rem;
+
+    @media screen and (max-width: $screen-width-breakpoint-2) {
+        font-size: 2.2rem !important
+    }
+
+    @media screen and (max-width:768px) {
+        font-size: 2rem !important;
+    }
+}
+
+h2 {
+    font-size: 2.1rem;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 1.5rem !important;
+    }
+}
+
+h3 {
+    font-size: 1.55rem;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 1.25rem !important;
+    }
+}
+
+h4 {
+    font-size: 1.45rem;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 1rem !important;
+    }
+}
+
+
+p {
+    margin-bottom: 0;
+    text-align: justify;
+
+    @media screen and (max-width: $screen-width-breakpoint-2) {
+        font-size: 14px;
+    }
+}
+
+// .carousel-item-inner {
+//     @include displayFlex(row, center, center);
+// }
+
+ul,
+ol {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+;
+
+a {
+    color: white;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    &.btn-primary {
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 0;
+        color: black;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: transparent;
+            border: 1px solid white;
+            outline: 0;
+            border-radius: 0;
+            color: white;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: $red-primary !important;
+        border: 1px solid $red-primary !important;
+        border-radius: 0;
+        color: white;
+
+        &.arrow-down {
+            svg {
+                fill: white;
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $red-primary;
+            border: 1px solid $red-primary;
+            outline: 0;
+            border-radius: 0;
+            color: $red-primary;
+        }
+    }
+
+
+}
+
+button {
+    text-transform: capitalize;
+    border-radius: 0 !important;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &.large-btn {
+        width: 250px;
+    }
+
+    &.md-btn {
+        width: 220px;
+    }
+
+    &.large-btn,
+    &.md-btn {
+        @include displayFlex(row, space-around, center);
+
+        .black-arrow {
+            display: none;
+        }
+
+        &:hover {
+            .black-arrow {
+                display: block
+            }
+
+            .white-arrow {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.btn {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.y-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @media screen and (max-width:768px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.carousel-inner {
+    height: 100%;
+
+    .carousel-item {
+        height: 100%;
+
+        .item {
+            height: 100%
+        }
+    }
+}
+
+.owl-next,
+.owl-prev {
+    width: 50px;
+    background-color: $red-primary !important;
+    height: 50px;
+    top: 15%;
+    opacity: 1;
+    z-index: 999;
+
+    &:focus {
+        outline: none;
+    }
+
+    @media screen and (max-width:767.98px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.owl-prev {
+    >img {
+        transform: rotate(180deg);
+    }
+}
+
+.left {
+
+    span,
+    p {
+        opacity: 0.7
+    }
+}
+
+.carousel-control-container {
+    position: relative;
+    width: 150px;
+    height: 70px;
+    margin-left: 74%;
+
+    @media screen and (max-width:767.98px) {
+        width: 100%;
+        margin-left: 0;
+        top: -60% !important;
+    }
+
+
+}
+
+.responsive-header {
+    @include displayFlex(row, space-between, center);
+    width: 100%;
+    padding-right: 16px;
+}
+
+.collapse-arrow {
+    transform: rotate(90deg)
+}
+
+
+section {
+    max-width: 100%;
+
+    @media screen and (max-width:767.98px) {
+        flex-direction: column !important;
+    }
+
+}
+
+html {
+    margin-top: 0 !important;
+}

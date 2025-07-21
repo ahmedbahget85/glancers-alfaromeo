@@ -1,0 +1,47 @@
+@mixin displayFlex($direction, $justify, $align) {
+    display: flex !important;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+;
+
+@mixin bgImage($width, $height) {
+    width: $width;
+    height: $height;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+@mixin beforeSquare($width, $height) {
+
+    content: '';
+    width: $width;
+    height: $height;
+    background-color: $red-primary;
+    border: 1px solid $red-primary;
+}
+
+
+@mixin anime-goDownFade($upoffset) {
+    transform: translateY($upoffset);
+    opacity: 0;
+    transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    &.go-animate {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@mixin responsiveHeight($height) {
+    max-height: 0;
+    overflow: hidden;
+    height: auto !important;
+
+    &.activeSection {
+        // height: $height !important;
+        max-height: $height;
+    }
+}

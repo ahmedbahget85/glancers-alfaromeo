@@ -1,0 +1,167 @@
+//common animation
+@keyframes revealText {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes dash {
+  30% {
+    stroke-dashoffset: 0;
+    stroke: white;
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: -5000;
+    stroke: white;
+    opacity: 0;
+  }
+}
+
+.model-overview {
+  &.go-animate {
+    .alfa-red-line {
+      &.extended {
+        animation: extending 2s linear forwards;
+        animation-delay: 2s;
+
+        @keyframes extending {
+          100% {
+            height: calc(100% + 80px);
+          }
+        }
+
+        a {
+          position: relative;
+          top: 0;
+          animation: moving-down 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+          animation-delay: 2s;
+
+          @keyframes moving-down {
+            to {
+              top: 90%;
+            }
+          }
+        }
+      }
+
+      &.z-2 {
+        animation: extending2 1s linear forwards;
+        animation-delay: 2.3s;
+
+        @keyframes extending2 {
+          to {
+            opacity: 1;
+            height: 35%;
+            visibility: visible;
+            z-index: 4;
+            background-color: $red-primary;
+          }
+        }
+      }
+    }
+
+    .text-wrapper {
+      animation: revealText 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+      animation-delay: 3s;
+      transform: translateX(-20px);
+      transition: 1s;
+    }
+
+    #alfa-snake-white {
+      stroke: white;
+      animation: dash2 3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+      animation-delay: 1.4s;
+      opacity: 0;
+      stroke-dasharray: 4000;
+      stroke-dashoffset: 4000;
+
+      @keyframes dash2 {
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+    #snake-path {
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      animation: dash 2s linear forwards;
+      animation-delay: 1s;
+      opacity: 0;
+      stroke: white;
+
+
+    }
+
+    .tail-text {
+      h2 {
+        transform: translateX(-20px);
+        animation: revealText 2s linear forwards;
+        animation-delay: 4s;
+      }
+
+      a {
+        animation: moveArrowLeft 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        animation-delay: 4s;
+
+        @keyframes moveArrowLeft {
+          to {
+            opacity: 1;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#highlights-section {
+  &.go-animate {
+    .alfa-red-line {
+      &.to-car {
+        animation: extending-full 1s linear forwards;
+
+        @keyframes extending-full {
+          100% {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .snake-road {
+      stroke-dasharray: 5000;
+      stroke-dashoffset: 5000;
+      animation: dash 4s linear forwards;
+      animation-delay: 1.5s;
+    }
+
+    .car-model-trans {
+      animation: goRight 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+      animation-delay: .2s;
+
+      @keyframes goRight {
+        to {
+          opacity: 1;
+          left: -7rem;
+        }
+      }
+    }
+
+    .head {
+      animation: revealText 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+      animation-delay: 1s;
+    }
+
+    ul {
+      li {
+        animation: revealText 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        animation-delay: 2s;
+      }
+    }
+  }
+}

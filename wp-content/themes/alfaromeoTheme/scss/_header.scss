@@ -1,0 +1,439 @@
+header {
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+
+    @media screen and (max-width: 1199.98px) {
+        height: 3rem;
+    }
+
+    nav {
+        background-color: $dark-hard;
+        height: 100%;
+        padding: 0px !important;
+
+        #mainNavbarContent {
+            height: 100%;
+
+            @media screen and (max-width: 767.98px) {
+                background-color: $gradient-level-3;
+                height: auto;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 3rem;
+            }
+
+            .navbar-nav {
+                align-items: center;
+                height: 100%;
+
+                @media screen and (max-width: 767.98px) {
+                    align-items: flex-start;
+                    height: auto;
+                }
+
+                .nav-item {
+                    height: 100%;
+                    padding: 0.7rem 16px;
+                    border-right: 1px solid $black;
+                    @include displayFlex(row, center, center);
+
+                    @media screen and (max-width: 767.98px) {
+                        border-right: 0;
+                        width: 100%;
+                        justify-content: flex-start;
+                    }
+
+                    @media screen and (min-width:768px) and (max-width:991.98px) {
+                        padding: 0.7rem 8px;
+                    }
+
+                    &.show {
+                        background-color: $red-primary;
+
+                        @media screen and (max-width:767.98px) {
+                            background-color: transparent;
+                        }
+
+                        .nav-link {
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                            }
+
+                            &:after {
+                                color: $white !important;
+                                transform: rotate(90deg);
+
+                                @media screen and (max-width: 767.98px) {
+                                    transform: none;
+                                }
+                            }
+                        }
+
+                        @media screen and (max-width: 767.98px) {
+                            .dropdown-menu {
+                                display: block !important;
+                            }
+                        }
+                    }
+
+                    &:not(:first-of-type) {
+                        &.active {
+                            background-color: $red-primary;
+                        }
+                    }
+
+                    .nav-link {
+                        color: $white !important;
+                        @include displayFlex(row, center, center);
+                        height: 100%;
+
+                        @media screen and (max-width:991.98px) {
+                            width: 100%;
+                            justify-content: flex-start;
+                        }
+
+                        @media screen and (max-width: $screen-width-breakpoint-2) {
+                            font-size: 13px;
+                        }
+
+                        &.dropdown-toggle {
+                            &:after {
+                                color: $red-primary;
+                                position: relative;
+                                left: 10px;
+                                border: 0;
+                                content: "\f054";
+                                width: 10px;
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+
+                    &:first-of-type {
+                        position: relative;
+
+                        .dropdown-menu {
+                            width: 100vw;
+                            top: 3.9rem;
+                            margin-top: 0;
+                            position: fixed;
+                            z-index: 999;
+                            border: 0;
+                            border-radius: 0;
+
+                            &::-webkit-scrollbar {
+                                width: 0;
+                            }
+
+                            @media screen and (min-width: 992px) {
+                                height: 32rem;
+                            }
+
+                            @media screen and (max-width: 991.98px) {
+                                min-height: 21rem;
+                                height: 1px;
+                                overflow: auto;
+                            }
+
+                            @media screen and (max-width: 767.98px) {
+                                min-height: calc(100vh - 3rem);
+                                display: none;
+                                left: 800px;
+                                background-color: $gradient-level-3;
+                                border-radius: 0;
+                                top: 3rem;
+
+                                &.show {
+                                    animation: slideInLeft 1s ease-in-out;
+                                    animation-fill-mode: forwards;
+                                    animation-iteration-count: 1;
+                                }
+
+                                &.slideOut {
+                                    animation: slideOutLeft 1s ease-in-out;
+                                    animation-fill-mode: forwards;
+                                    animation-iteration-count: 1;
+                                }
+                            }
+
+                            @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+                                top: 3rem;
+                            }
+
+                            .back-menu {
+                                img {
+                                    transform: scaleX(-1);
+                                }
+                            }
+
+                            .dropdown-menu-inner {
+                                @include displayFlex(column, flex-start, center);
+
+                                @media screen and (min-width: 768px) {
+                                    height: 100% !important;
+
+                                }
+
+
+
+                                .dropdown-menu-left {
+                                    width: 100%;
+                                    height: 25%;
+                                    background-color: $gradient-level-3;
+
+                                    @media screen and (max-width: 767.98px) {
+                                        width: 100%;
+                                    }
+
+
+                                    .dropdown-menu-left-inner {
+                                        width: 100%;
+                                        height: 100%;
+                                        @include displayFlex(row, space-evenly, center);
+
+                                        @media screen and (max-width:767.98px) {
+
+                                            @include displayFlex(column, flex-start, center);
+                                        }
+
+                                        .dropdown-item {
+                                            height: 100%;
+                                            position: relative;
+
+                                            @include displayFlex(column, space-evenly, center);
+
+                                            @media screen and (max-width: 767.98px) {
+                                                height: 200px;
+                                            }
+
+                                            img {
+                                                width: 240px;
+
+                                                @media screen and (max-width: 767.98px) {
+                                                    width: 400px;
+                                                }
+
+                                                @media screen and (min-width:768px) and (max-width:991.98px) {
+                                                    width: 200px;
+                                                }
+                                            }
+
+                                            &:hover,
+                                            &.active,
+                                            &:focus {
+                                                background-color: $dark-hard;
+                                                outline: 0;
+
+                                                &:before {
+                                                    position: absolute;
+                                                    content: "";
+                                                    width: 5px;
+                                                    background-color: $red-primary;
+                                                    animation: increaseBorder 0.5s ease-in-out;
+                                                    animation-fill-mode: forwards;
+                                                    animation-iteration-count: 1;
+                                                    right: 0;
+                                                    top: 0;
+                                                }
+                                            }
+
+                                            span {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .dropdown-menu-bottom {
+                                    @include displayFlex(row, space-evenly, center);
+                                    width: 100%;
+                                    height: 75%;
+
+                                    .dropdown-menu-meduim {
+                                        width: 50%;
+                                        height: 100%;
+                                        background-color: $dark-hard;
+                                        color: $white;
+
+                                        @media screen and (max-width: 767.98px) {
+                                            display: none;
+                                        }
+
+                                        .dropdown-menu-meduim-inner {
+                                            @include displayFlex(column, center, flex-start);
+                                            height: 100%;
+                                            padding: 0 90px;
+                                            position: relative;
+
+                                            .meduim-inner-contain {
+                                                position: absolute;
+                                                left: 15%;
+                                                right: 15%;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                transition: visibility 0.7s ease-in-out, opacity 0.7s ease-in-out;
+
+                                                @media screen and (min-width:768px) and (max-width:991.98px) {
+                                                    left: 10%;
+                                                }
+
+                                                &.isHover {
+                                                    visibility: hidden;
+                                                    opacity: 0;
+
+                                                    img {
+                                                        width: 170px;
+
+                                                        &.w-larger {
+                                                            width: 220px !important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            * {
+                                                margin-bottom: 16px;
+
+                                                @media screen and (min-width:768px) and (max-width:991.98px) {
+                                                    margin-bottom: 8px;
+                                                }
+                                            }
+
+                                            h4 {
+                                                line-height: 1.5;
+                                            }
+
+                                            p {
+                                                opacity: 0.6;
+                                            }
+
+                                            a {
+                                                color: $white;
+                                                background-color: $red-primary;
+                                                padding: 8px 16px;
+                                            }
+                                        }
+                                    }
+
+                                    .dropdown-menu-right {
+                                        width: 50%;
+                                        height: 100%;
+                                        position: relative;
+
+                                        @media screen and (max-width: 767.98px) {
+                                            display: none;
+                                        }
+
+                                        .dropdown-menu-right-inner {
+                                            @include bgImage(100%, 100%);
+                                            background-position: 57% 57%;
+                                            position: absolute;
+                                            transition: visibility 0.7s ease-in-out, opacity 0.7s ease-in-out;
+
+                                            &.isHover {
+                                                visibility: hidden;
+                                                opacity: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            width: 150px;
+
+            @media screen and (max-width: $screen-width-breakpoint-2) {
+                width: 120px;
+            }
+
+            margin: 0 -10px;
+            padding: 5px;
+        }
+
+        .navbar-toggler {
+            padding: 0;
+            background-color: $red-primary;
+            height: 100%;
+            border: 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            .navbar-toggler-icon {
+                @include displayFlex(row, center, center);
+                background-image: none;
+                color: $white;
+                font-size: 1.5rem;
+
+                .fa-times {
+                    display: none;
+                }
+
+                &.close {
+                    .fa-times {
+                        display: block;
+                    }
+
+                    .fa-bars {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .ezz-logo {
+            margin-left: auto;
+
+            img {
+                width: 125px;
+
+                @media screen and (max-width: $screen-width-breakpoint-2) {
+                    width: 90px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes increaseBorder {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: 800px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 800px;
+    }
+}

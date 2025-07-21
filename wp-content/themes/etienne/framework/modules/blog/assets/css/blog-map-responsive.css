@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .eltdf-blog-pagination {
+    margin-bottom: 46px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltdf-blog-holder article.format-quote .eltdf-post-text {
+    padding: 29px 23px 27px;
+  }
+  .eltdf-blog-holder article.format-link .eltdf-post-text {
+    padding: 29px 13px 23px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltdf-related-posts-holder .eltdf-related-post {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltdf-related-posts-holder .eltdf-related-post {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltdf-blog-holder.eltdf-blog-single article.format-quote .eltdf-post-text {
+    padding: 29px 53px 17px;
+  }
+  .eltdf-blog-holder.eltdf-blog-single article.format-link .eltdf-post-text {
+    padding: 29px 53px 23px;
+  }
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-left,
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-right {
+    width: 100%;
+    float: none;
+  }
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-right {
+    text-align: right;
+    margin: 10px 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 1024px) {
+  .eltdf-blog-holder.eltdf-blog-single article.eltdf-post-has-media .eltdf-post-heading .eltdf-blog-gallery, .eltdf-blog-holder.eltdf-blog-single article.format-audio .eltdf-post-heading .eltdf-blog-gallery, .eltdf-blog-holder.eltdf-blog-single article.format-gallery .eltdf-post-heading .eltdf-blog-gallery {
+    margin-top: 48px !important;
+  }
+}
+
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-map-responsive.css.map */
